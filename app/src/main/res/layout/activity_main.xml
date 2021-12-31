@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/temp1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tempImage">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBar"
+        app:layout_constraintTop_toBottomOf="@+id/tempImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text = "@string/textBar"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-black">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempBar"
+        app:layout_constraintTop_toBottomOf="@id/textBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="60dp"
+        android:hint="@string/hint"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center">
+    </EditText>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/celcius"
+        android:onClick="toCelcius"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:id="@+id/Button1"
+        app:layout_constraintTop_toBottomOf="@id/tempBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="45dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@android:color/holo_purple"
+        android:layout_height="wrap_content"
+        android:onClick="toFahrenheit"
+        android:text="@string/fahrenheit"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="45dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tempBar">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
